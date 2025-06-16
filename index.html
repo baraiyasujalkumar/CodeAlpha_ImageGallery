@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <h1>My Simple Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <!-- Gallery Container -->
+
+  <div class="gallery">
+    <img src="nature1.jpg" class="nature" onclick="openLightbox(this)">
+    <img src="city1.jpg" class="city" onclick="openLightbox(this)">
+    <img src="nature2.jpg" class="nature" onclick="openLightbox(this)">
+    <img src="city2.jpg" class="city" onclick="openLightbox(this)">
+  </div>
+
+  <!-- Lightbox View -->
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <span class="close">X</span>
+    <img id="lightbox-img" src="">
+    <div class="controls">
+      <button onclick="prevImage()">◀️ Prev</button>
+      <button onclick="nextImage()">Next ▶️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
